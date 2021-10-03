@@ -1,0 +1,3 @@
+tweepy>=3.9,<4.0
+asteval>=0.9.23,<0.10.0
+ChatterBot @ git+git://github.com/darajnish/ChatterBot@master#egg=ChatterBot

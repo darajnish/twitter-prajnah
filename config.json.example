@@ -1,0 +1,13 @@
+{
+    "api_key" : "TWITTER-DEVELOPER-APP-KEY",
+    "api_secret" : "TWITTER-DEVELOPER-APP-SECRET",
+    "access_key" : "TWITTER-AUTH-ACCESS-KEY",
+    "access_secret" : "TWITTER-AUTH-ACCESS-SECRET",
+    "sleep_time" : 15,
+    "ratelimit_wait" : 15,
+    "aitalk" : {
+        "db_uri" : "protocol://user:password@hostname:port/database",
+        "masters" : ["TWITTER-USERNAME"],
+        "restrict_learn" : false
+    }
+}
