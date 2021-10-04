@@ -118,7 +118,7 @@ python TwitterPrajnah.py --config my-config.json --mods-dir /path/to/modules_dir
 Running using the `DATABASE_URL` environment variable on the same line,
 
 ```bash
-DATABASE_URL="postgres://<user>:<password>@<hostname>:<port>/<database>" python TwitterPrajnah.py --config my-config.json
+DATABASE_URL="<protocol>://<user>:<password>@<hostname>:<port>/<database>" python TwitterPrajnah.py --config my-config.json
 ```
 
 
@@ -222,7 +222,28 @@ def onModuleUnload(bot, config, logger):
 
 After creating the module, save it into the modules directory as a python file (example: `mods/test_mod.py`), and it'll get loaded and execute whenever a tweet is received.
 
+Every module can be configured directly from the config file, by creating a key with the respective module name and placing all key-value configurations related to the module inside it. For example, how we've created a key for our example module **modX** below,
 
+```json
+{
+    "api_key" : "TWITTER-DEVELOPER-APP-KEY",
+    "api_secret" : "TWITTER-DEVELOPER-APP-SECRET",
+    "access_key" : "TWITTER-AUTH-ACCESS-KEY",
+    "access_secret" : "TWITTER-AUTH-ACCESS-SECRET",
+    "sleep_time" : 15,
+    "ratelimit_wait" : 15,
+    "aitalk" : {
+        "db_uri" : "protocol://user:password@hostname:port/database",
+        "masters" : ["TWITTER-USERNAME"],
+        "restrict_learn" : false
+    },
+    
+    "modX" : {
+        "key1" : 1,
+        "key2" : "value"
+    }
+}
+```
 
 ## Contributing
 
