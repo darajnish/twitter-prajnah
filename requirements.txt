@@ -1,3 +1,4 @@
 tweepy>=3.9,<4.0
 asteval>=0.9.23,<0.10.0
+psycopg2-binary>=2.9.0,<2.9.10
 ChatterBot @ git+git://github.com/darajnish/ChatterBot@master#egg=ChatterBot
